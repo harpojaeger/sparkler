@@ -23,7 +23,7 @@ puts 'Deduping apps...'
 apps = []
 res.each do |ln|
   item = Hash[:path, ln.strip, :app, "#{ln.split('.app')[0]}.app"]
-  apps.push(item)
+  apps << item
 end
 
 apps = apps.uniq { |item| item[:app] }
