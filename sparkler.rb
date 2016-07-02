@@ -7,6 +7,7 @@ apps = []
 
 PTY.spawn "find #{scanpath} -name 'Sparkle.framework'" do |r, _w, _p|
   2.times { puts }
+  
   while (ln = r.gets).is_a?String
     basepath = ln.split('.app')[0]
     basename = basepath.split(scanpath)[1]
